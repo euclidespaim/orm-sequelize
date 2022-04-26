@@ -44,6 +44,14 @@ module.exports = {
           role: "docente",
           createdAt: new Date(),
           updatedAt: new Date(),
+        },
+        {
+          nome: 'Felipe Cardoso',
+          ativo: true,
+          email: 'felipe@mail.com',
+          role: 'estudante',
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ],
       {}
