@@ -1,14 +1,9 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const { Model } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Turmas extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+ 
     static associate(models) {
       // define association here
       Turmas.hasMany(models.Matriculas, {
@@ -21,11 +16,13 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'nivel_id'
       })
     }
-  }
+  } { paranoid: true}
+
   Turmas.init({
     data_inicio: DataTypes.DATEONLY
   }, {
     sequelize,
+    paranoid: true,
     modelName: 'Turmas',
   });
   return Turmas;
