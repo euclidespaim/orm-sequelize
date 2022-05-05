@@ -4,8 +4,8 @@ const PessoaController = require('../controllers/PessoaController')
 const router = Router()
 
 router
-    .get('/pessoas', PessoaController.pegaPessoasAtivas)
-    .get('/pessoas/todas', PessoaController.pegaTodasAsPessoas)
+    .get('/pessoas', PessoaController.pegaTodasAsPessoas)
+    .get('/pessoas/ativas', PessoaController.pegaPessoasAtivas)
     .get('/pessoas/:id', PessoaController.pegaPessoaPorId)
     .get('/pessoas/:estudanteId/matricula/:matriculaId', PessoaController.pegaMatriculaPorId)
     .get('/pessoas/:estudanteId/matricula/', PessoaController.pegaMatricula)
